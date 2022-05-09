@@ -11,7 +11,7 @@
                         </a>
                     </div>
                     <div class="login-form">
-                        <form action="/register" method="POST" enctype="multipart/form-data"> 
+                        <form action="/register" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
                                 <label>Name</label>
@@ -34,7 +34,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Password</label>
-                                <input class="au-input au-input--full" type="password" name="password" placeholder="Password">
+                                <input class="au-input au-input--full" type="password" name="password" placeholder="password">
                             </div>
                             <div class="form-group">
                                 <label>User Image</label>

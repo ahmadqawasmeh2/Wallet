@@ -8,10 +8,10 @@ use Illuminate\Notifications\Notifiable;
 use App\Model\user;
 use App\Model\transaction;
 
-class usercategory extends Authenticatable
+class UserCategory extends Authenticatable
 {
     use Notifiable;
-
+     protected $table='user_categorys';
     protected $fillable =['name', 'user_id', 'income', 'expenses'];
 
     public function user()

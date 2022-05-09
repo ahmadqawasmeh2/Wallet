@@ -23,7 +23,7 @@ class Registercontroller extends Controller
             $filename = time() . '.' . $image->getClientOriginalExtension();
             Image::make($image)->resize(300, 300)->save(public_path('imageuser'.$filename));
             $image = 'imageuser'.$filename;
-    
+
             $user = new user;
             $user->name = $request['name'];
             $user->email = $request['email'];
@@ -32,6 +32,7 @@ class Registercontroller extends Controller
             $user->password = Hash::make($request['password']);
             $user->image = $image;
             $user->save();
+            auth()->login($user);
             return redirect()->route('home.home');
     }
 }

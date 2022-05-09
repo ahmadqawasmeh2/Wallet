@@ -22,10 +22,6 @@ class CreateTransactionsTable extends Migration
             $table->string('total_income');
             $table->string('total_expenses');
             $table->string('note');
-
-            // $table->foreign('user_id')->references('id')->on('user')->onDelete('cascade');
-            // $table->foreign('admin_cate')->references('id')->on('admincategory')->onDelete('cascade');
-            // $table->foreign('user_cate')->references('id')->on('usercategory')->onDelete('cascade');
             $table->timestamps();
         });
     }

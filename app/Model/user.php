@@ -9,7 +9,7 @@ use App\Model\usercategory;
 use App\Model\transaction;
 
 
-class user extends Authenticatable
+class User extends Authenticatable
 {
     use Notifiable;
 

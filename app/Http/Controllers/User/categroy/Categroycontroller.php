@@ -5,7 +5,7 @@ namespace App\Http\Controllers\User\categroy;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\User\categroy\AddCategroyRequest;
 use Illuminate\Support\Facades\Auth;
-use App\Model\usercategory;
+use App\Model\UserCategory;
 
 class Categroycontroller extends Controller
 {
@@ -18,7 +18,10 @@ class Categroycontroller extends Controller
     {
        $data=$request->all;
        $data['user_id']=Auth::user()->id;
-       $data = usercategory::Create($data);
-       return redirect()->route('home.index')->with('success', 'Create Categroy Successfully');
+       $data['name']=$request->name;
+       $data['income']=$request->income;
+       $data['expenses']=$request->expenses;
+       $data = UserCategory::Create($data);
+       return redirect()->route('home.home')->with('success', 'Create Categroy Successfully');
     }
 }

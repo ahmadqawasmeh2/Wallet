@@ -13,7 +13,7 @@ class CreateAdmincategoriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('admincategory', function (Blueprint $table) {
+        Schema::create('admincategorys', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->timestamps();

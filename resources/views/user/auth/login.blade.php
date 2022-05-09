@@ -11,7 +11,7 @@
                             </a>
                         </div>
                         <div class="login-form">
-                            <form action="/login" method="post">
+                            <form action="{{ route('login') }}" method="post">
                             @csrf
                                 <div class="form-group">
                                     <label>Email Address</label>
@@ -19,7 +19,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Password</label>
-                                    <input class="au-input au-input--full" type="password" name="password" placeholder="Password">
+                                    <input class="au-input au-input--full" type="password" name="password" placeholder="password">
                                 </div>
                                 <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">sign in</button>
                             </form>
